@@ -1,0 +1,27 @@
+{
+    "name":  "Odoo ChannelEngine connector",
+    "summary":  """ChannelEngine Odoo Connector integrates Odoo with ChannelEngine. 
+        Manage your ChannelEngine store in Odoo. Handle ChannelEngine orders in Odoo. Ecommerce Connector""",
+    "category":  "Website",
+    "version":  "2.1.1",
+    "sequence":  1,
+    "author":  "Yatrik Chauhan",
+    "license":  "Other proprietary",
+    "website":  "",
+    "maintainer":  "Yatrik Chauhan",
+    "live_test_url":  "",
+    "depends":  ['base', 'sh_message'],
+    'post_init_hook': '_account_post_init',
+    "qweb":  [],
+    "data":  [
+        'security/ir.model.access.csv',
+        'views/channelengine_backend_view.xml',
+    ],
+    "images":  [],
+    "application":  True,
+    "installable":  True,
+    "auto_install": False,
+    "price":  80,
+    "currency":  "EUR",
+    "external_dependencies":  {'python': ['channelengine_merchant_api_client']},
+}
